@@ -1,4 +1,4 @@
 Initial-Laravel is customized for my development 
 ===
--Installed
---Smarty3.1
+*Installed
+**Smarty3.1
