@@ -17,6 +17,6 @@
 7. chmod -R 777 app/storage
 8. Access http://< your setting hosts name >/
 
-- Notes
+# Notes
 *if "SQLSTATE[HY000] [2002] No such file or directory" message occured, you should add path to  your php.ini file like:
 pdo_mysql.default_socket=/tmp/mysql.sock
