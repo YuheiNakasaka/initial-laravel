@@ -15,7 +15,8 @@
 5. cd initial-laravel
 6. composer install
 7. chmod -R 777 app/storage
-8. Access http://< your setting hosts name >/
+8. $composer dump-autoload
+9. Access http://< your setting hosts name >/
 
 # Notes
 *if "SQLSTATE[HY000] [2002] No such file or directory" message occured, you should add path to  your php.ini file like:
