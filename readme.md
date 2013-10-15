@@ -3,10 +3,11 @@
 
 - Smarty3.1
 
-## How to use
+## How to install
 
 - required php >= 5.3.7
 - MCrypt PHP Extension
+- git,subversion
 
 1. curl -sS https://getcomposer.org/installer | php
 2. cp composer.phar /usr/local/bin/composer
@@ -17,6 +18,28 @@
 7. chmod -R 777 app/storage
 8. $composer dump-autoload
 9. Access http://< your setting hosts name >/
+
+## Custom function
+
+### _display
+
+- smarty custom function
+
+```
+class TestController extends My_Controller {
+    public function __construct()
+    {
+        parent::construct();
+    }
+    
+    public function index()
+    {
+        $data['val'] = "val";
+        
+    }
+}
+```
+ 
 
 # Notes
 *if "SQLSTATE[HY000] [2002] No such file or directory" message occured, you should add path to  your php.ini file like:
