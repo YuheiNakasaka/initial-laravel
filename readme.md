@@ -21,26 +21,41 @@
 
 ## Custom function
 
-### _display
+### _display($template_path, $key_valueset)
 
 - smarty custom function
+
+ex)bind some data to /app/views/test/index.tpl.html
 
 ```
 class TestController extends My_Controller {
     public function __construct()
     {
-        parent::construct();
+        parent::construct();//load My_Controller
     }
     
     public function index()
     {
-        $data['val'] = "val";
-        
+        $data['key1'] = "val1";
+        $data['key2'] = "val2";
+        $data['key3'] = "val3";
+        return $this->_display("test/index", $data);
     }
 }
 ```
- 
+In test/index.tpl.html
 
-# Notes
-*if "SQLSTATE[HY000] [2002] No such file or directory" message occured, you should add path to  your php.ini file like:
+```
+<html>
+<body>
+    <p>key1 is {$key1}</p>
+    <p>key2 is {$key2}</p>
+    <p>key3 is {$key3}</p>
+</body>
+</html>
+```
+
+# Notice
+
+- if "SQLSTATE[HY000] [2002] No such file or directory" message occured, you should add path to  your php.ini file like:
 pdo_mysql.default_socket=/tmp/mysql.sock
