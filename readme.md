@@ -2,6 +2,7 @@
 ## Installed
 
 - Smarty3.1
+- laravel-debugbar
 
 ## How to install
 
@@ -18,6 +19,11 @@
 7. chmod -R 777 app/storage
 8. $composer dump-autoload
 9. Access http://< your setting hosts name >/
+
+### How to set your local/global environment
+
+1. Specify your db environment to app/config/(local|global)/database.php
+2. Set environment to bootstrap/start.php
 
 ## Custom function
 
