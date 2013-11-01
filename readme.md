@@ -4,6 +4,7 @@
 - Smarty3.1
 - laravel-debugbar
 - laravel4-generators
+- phpunit
 
 ## How to install
 
