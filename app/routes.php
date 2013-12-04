@@ -11,7 +11,11 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
+Route::get('/', 'HomeController@showWelcome');
+
+App::bind('Anvil', function(){
+    return new Acme\Product\Anvil\AnvilHeavy;
+});
+App::bind('HomeController', function(){
+    return new HomeController(App::make('Anvil'));
 });
